@@ -1,11 +1,11 @@
 name: Build Geode Mod
-
+ 
 on:
   workflow_dispatch:
   push:
     branches:
       - "**"
-
+ 
 jobs:
   build:
     strategy:
@@ -20,29 +20,33 @@ jobs:
           - name: Android64
             os: ubuntu-latest
             target: Android64
-
+ 
     name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
-
+ 
     steps:
       - uses: actions/checkout@v4
-
+ 
       - name: Build the mod
         uses: geode-sdk/build-geode-mod@main
         with:
           combine: true
           target: ${{ matrix.config.target }}
-
+          # Geode's bindings "main" branch is mid-update right now and broke the build.
+          # This is the last commit known to compile; remove this line once upstream is stable.
+          bindings-ref: 13436953582c8bfa6d7a91392c9f575d5bafec83
+ 
   package:
     name: Package builds
     runs-on: ubuntu-latest
     needs: ["build"]
-
+ 
     steps:
       - uses: geode-sdk/build-geode-mod/combine@main
         id: build
-
+ 
       - uses: actions/upload-artifact@v4
         with:
           name: Build Output
           path: ${{ steps.build.outputs.build-output }}
+ 
