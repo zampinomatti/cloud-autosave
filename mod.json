@@ -6,9 +6,9 @@
     "mac": "*",
     "ios": "*"
   },
-  "id": "mattia013.cloud-autosave",
+  "id": "Mattia013.cloud-autosave",
   "name": "Cloud Autosave",
-  "version": "v1.1.0",
+  "version": "v1.2.0",
   "developer": "Mattia013",
   "description": "Automatically saves your Geometry Dash account to the official servers (same as the Save button in the account menu).",
   "tags": [
@@ -19,19 +19,19 @@
     "save-on-new-best": {
       "type": "bool",
       "name": "Save on new best",
-      "description": "Save your account every time you get a new best on a level.",
+      "description": "Save your account after a new best. The save happens when you pause or leave the level, never during gameplay.",
       "default": true
     },
     "save-on-stat-change": {
       "type": "bool",
       "name": "Save when account stats change",
-      "description": "Save when stars, moons, demons, secret coins, user coins or diamonds change (for example after completing a level).",
+      "description": "Save when stars, moons, demons, secret coins, user coins or diamonds change (for example after completing a level). Only happens when you are not playing.",
       "default": true
     },
     "cooldown": {
       "type": "int",
       "name": "Minimum time between saves (seconds)",
-      "description": "Saves requested during this time are delayed, so the servers are not spammed.",
+      "description": "Minimum time between two saves. Everything that happens during this time is merged into one later save.",
       "default": 30,
       "min": 10,
       "max": 600,
