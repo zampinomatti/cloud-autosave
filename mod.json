@@ -1,0 +1,41 @@
+{
+	"geode": "5.9.0",
+	"gd": {
+		"win": "*",
+		"android": "*",
+		"mac": "*",
+		"ios": "*"
+	},
+	"id": "mattia.cloud-autosave",
+	"name": "Cloud Autosave",
+	"version": "v1.0.0",
+	"developer": "Mattia",
+	"description": "Salva automaticamente l'account di Geometry Dash sui server ufficiali (stesso backup del pulsante Save nel menu account).",
+	"tags": ["utility", "online"],
+	"settings": {
+		"interval-minutes": {
+			"type": "int",
+			"name": "Intervallo minimo (minuti)",
+			"description": "Tempo minimo tra un backup automatico e il successivo.",
+			"default": 15,
+			"min": 5,
+			"max": 240,
+			"control": {
+				"input": true,
+				"slider": true
+			}
+		},
+		"on-level-exit": {
+			"type": "bool",
+			"name": "Salva all'uscita da un livello",
+			"description": "Prova a fare il backup quando esci da un livello (rispettando l'intervallo minimo).",
+			"default": true
+		},
+		"show-notifications": {
+			"type": "bool",
+			"name": "Mostra notifiche",
+			"description": "Mostra una notifica quando il backup riesce o fallisce.",
+			"default": true
+		}
+	}
+}
