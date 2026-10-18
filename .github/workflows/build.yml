@@ -33,8 +33,11 @@ jobs:
           combine: true
           target: ${{ matrix.config.target }}
           # Geode's bindings "main" branch is mid-update right now and broke the build.
-          # This is the last commit known to compile; remove this line once upstream is stable.
+          # bindings-ref = last commit known to compile. configure-args makes CMake build the
+          # Codegen tool from that same commit instead of downloading a newer, incompatible one.
+          # Remove both lines once upstream is stable.
           bindings-ref: 13436953582c8bfa6d7a91392c9f575d5bafec83
+          configure-args: "-DSKIP_BUILDING_CODEGEN=OFF"
  
   package:
     name: Package builds
