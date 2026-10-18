@@ -173,7 +173,3 @@ class $modify(AutosavePlayLayer, PlayLayer) {
         }
     }
 };
- 
-        }
-    }
-};
