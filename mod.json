@@ -1,41 +1,50 @@
 {
-	"geode": "5.9.0",
-	"gd": {
-		"win": "*",
-		"android": "*",
-		"mac": "*",
-		"ios": "*"
-	},
-	"id": "mattia.cloud-autosave",
-	"name": "Cloud Autosave",
-	"version": "v1.0.0",
-	"developer": "Mattia",
-	"description": "Salva automaticamente l'account di Geometry Dash sui server ufficiali (stesso backup del pulsante Save nel menu account).",
-	"tags": ["utility", "online"],
-	"settings": {
-		"interval-minutes": {
-			"type": "int",
-			"name": "Intervallo minimo (minuti)",
-			"description": "Tempo minimo tra un backup automatico e il successivo.",
-			"default": 15,
-			"min": 5,
-			"max": 240,
-			"control": {
-				"input": true,
-				"slider": true
-			}
-		},
-		"on-level-exit": {
-			"type": "bool",
-			"name": "Salva all'uscita da un livello",
-			"description": "Prova a fare il backup quando esci da un livello (rispettando l'intervallo minimo).",
-			"default": true
-		},
-		"show-notifications": {
-			"type": "bool",
-			"name": "Mostra notifiche",
-			"description": "Mostra una notifica quando il backup riesce o fallisce.",
-			"default": true
-		}
-	}
+  "geode": "5.9.0",
+  "gd": {
+    "win": "*",
+    "android": "*",
+    "mac": "*",
+    "ios": "*"
+  },
+  "id": "mattia013.cloud-autosave",
+  "name": "Cloud Autosave",
+  "version": "v1.1.0",
+  "developer": "Mattia013",
+  "description": "Automatically saves your Geometry Dash account to the official servers (same as the Save button in the account menu).",
+  "tags": [
+    "utility",
+    "online"
+  ],
+  "settings": {
+    "save-on-new-best": {
+      "type": "bool",
+      "name": "Save on new best",
+      "description": "Save your account every time you get a new best on a level.",
+      "default": true
+    },
+    "save-on-stat-change": {
+      "type": "bool",
+      "name": "Save when account stats change",
+      "description": "Save when stars, moons, demons, secret coins, user coins or diamonds change (for example after completing a level).",
+      "default": true
+    },
+    "cooldown": {
+      "type": "int",
+      "name": "Minimum time between saves (seconds)",
+      "description": "Saves requested during this time are delayed, so the servers are not spammed.",
+      "default": 30,
+      "min": 10,
+      "max": 600,
+      "control": {
+        "input": true,
+        "slider": true
+      }
+    },
+    "show-notifications": {
+      "type": "bool",
+      "name": "Show notifications",
+      "description": "Show a notification when a save succeeds or fails.",
+      "default": false
+    }
+  }
 }
