@@ -1,5 +1,5 @@
 {
-  "geode": "5.9.0",
+  "geode": "6.0.0",
   "gd": {
     "win": "*",
     "android": "*",
@@ -8,7 +8,7 @@
   },
   "id": "mattia013.cloud-autosave",
   "name": "Cloud Autosave",
-  "version": "v1.2.0",
+  "version": "v1.3.0",
   "developer": "Mattia013",
   "description": "Automatically saves your Geometry Dash account to the official servers (same as the Save button in the account menu).",
   "tags": [
