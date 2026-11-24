@@ -32,8 +32,6 @@ jobs:
         with:
           combine: true
           target: ${{ matrix.config.target }}
-          bindings-ref: 13436953582c8bfa6d7a91392c9f575d5bafec83
-          configure-args: "-DSKIP_BUILDING_CODEGEN=OFF"
  
   package:
     name: Package builds
