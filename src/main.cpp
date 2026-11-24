@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <array>
 #include <chrono>
+#include <cstdint>
  
 using namespace geode::prelude;
 
